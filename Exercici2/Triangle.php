@@ -1,33 +1,19 @@
 <?php
 
+    require_once 'Shape.php';
+
     class Triangle extends Shape {
 
-        private int $base;
-
-        function __construct($ample,$alt,$base){
-            parent:: __constructi($ample,$alt);
-            $this->base = $base;
-
-        }
-
-        function getBase(){
-            return $this->base;
-        }
-
         public function area(){
-            $area;
 
-            $area = ($this->base * parent::getAlt())/2;
 
-            return $area;
+            return ($this->ample * $this->alt)/2;
         }
 
         function toString(){
 
-            return "L'area del triangle es " . area();
+            return "L'area del triangle es " . $this->area();
         }
-
-
 
     }
 

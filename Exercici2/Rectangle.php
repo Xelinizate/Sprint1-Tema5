@@ -1,22 +1,17 @@
 <?php
 
+    require_once 'Shape.php';
+
     class Rectangle extends Shape{
 
-        function __construct($ample,$alt){
-            parent::__construct($ample,$alt);
-        }
+         public function area(){
 
-        public function area(){
-            $area;
-
-            $area = parent::getAmple() * parent::getAlt();
-
-            return $area;
+            return $this->ample * $this->alt;
         }
 
         function toString(){
 
-            return "La mida del area del rectangle es " . area();
+            return "La mida del area del rectangle es " . $this->area();
         }
 
     }
